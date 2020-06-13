@@ -14,21 +14,14 @@ $(document).ready(function () {
 			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$('html, body').animate(
 				{
-					scrollTop: $(hash).offset().top - convertRemToPixels(4),
+					scrollTop: $(hash).offset().top - $('nav').height(),
 				},
 				800,
 				function () {
-					// Add hash (#) to URL when done scrolling (default click behavior)
-					window.location.hash = hash;
+					// 	// Add hash (#) to URL when done scrolling (default click behavior)
+					window.history.replaceState(null, null, hash);
 				}
 			);
 		} // End if
 	});
 });
-
-// SOURCE: etham from StackOverflow
-function convertRemToPixels(rem) {
-	return (
-		rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
-	);
-}
