@@ -10,7 +10,7 @@ window.onload = function () {
 		'britnie.png',
 	];
 	const offset = '../assets/profiles/';
-	const profileElems = document.querySelectorAll('.profile');
+	const profileElems = document.querySelectorAll('.profile .image');
 
 	for (let i = 0; i < pictures.length; i++) {
 		profileElems[i].style.background =
