@@ -259,7 +259,7 @@ nav li > a:hover::before {
 }
 
 #e-board .desc p:not(.title) {
-	font: 400 1rem 'Raleway', sans-serif;
+	font-weight: 300;
 }
 
 /* events */
@@ -365,6 +365,9 @@ nav li > a:hover::before {
 }
 
 /* events */
+#events {
+	height: 100%;
+}
 
 footer {
 	width: 100%;
