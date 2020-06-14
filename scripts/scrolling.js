@@ -16,11 +16,7 @@ $(document).ready(function () {
 				{
 					scrollTop: $(hash).offset().top - $('nav').height(),
 				},
-				800,
-				function () {
-					// 	// Add hash (#) to URL when done scrolling (default click behavior)
-					window.history.replaceState(null, null, hash);
-				}
+				800
 			);
 		} // End if
 	});
