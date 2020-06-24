@@ -1,5 +1,5 @@
-// set profile pictures
 window.onload = function () {
+	// set profile pictures
 	const pictures = [
 		'jen.png',
 		'tu-anh.png',
@@ -17,4 +17,9 @@ window.onload = function () {
 			'url(' + offset + pictures[i] + ') center';
 		profileElems[i].style.backgroundSize = 'cover';
 	}
+
+	// set video height
+	const video = document.querySelector('#spring > div:last-of-type > iframe');
+	const picture = document.querySelector('#spring > div:last-of-type > img');
+	video.style.height = picture.style.height;
 };

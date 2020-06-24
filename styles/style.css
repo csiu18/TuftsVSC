@@ -25,6 +25,18 @@ body {
 	color: #d39035;
 }
 
+.italic {
+	font-style: italic;
+}
+
+.dark-tan {
+	color: #d39035;
+}
+
+.red {
+	color: #7b1c1e;
+}
+
 /* navbar */
 nav {
 	padding: 0 5%;
@@ -45,7 +57,7 @@ nav a {
 }
 
 nav ul {
-	width: 30%;
+	width: 40%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -370,9 +382,106 @@ nav li > a:hover::before {
 
 /* events */
 #events {
-	height: 200%;
-	background: url('../assets/images/diagonal-background.svg') no-repeat center, #ffffff;
-	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#events h1 {
+	font-weight: 600;
+	font-size: 1.75rem;
+}
+
+#events > h1 {
+	padding-bottom: .5rem;
+	border-bottom: 3px #d39035 solid;
+	margin-top: 2rem;
+}
+
+#events p {
+	font-size: 1.25rem;
+}
+
+#events > div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+#fall {
+	padding-bottom: 1rem !important;
+}
+
+#fall > div, #spring > div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#fall > div:first-of-type, #spring > div:first-of-type {
+	padding-bottom: 1rem;
+}
+
+#fall > div:first-of-type > div, #spring > div:first-of-type > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 5%;
+}
+
+#fall > div:first-of-type > div {
+	width: 40%;
+}
+
+#fall > div:first-of-type > div > *, #spring > div:first-of-type > div > * {
+	padding: 1rem 0;
+}
+
+#fall > div:first-of-type > img{
+	width: 60%;
+}
+
+#fall > div:last-of-type, #spring > div:last-of-type {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+}
+
+#fall > div:last-of-type > img {
+	width: 50%;
+}
+
+#fall > div:last-of-type > img:first-of-type {
+	padding-right: 1rem;
+}
+
+#fall > div:last-of-type > img:last-of-type {
+	padding-left: 1rem;
+}
+
+#spring {
+	padding-top: 1rem !important;
+}
+
+#spring > div:first-of-type > iframe {
+	width: 64vw;
+	height: 36vw;
+}
+
+#spring > div:first-of-type > div {
+	width: 36vw; 
+}
+
+#spring > div:last-of-type > iframe {
+	width: 52%;
+	padding-left: 1rem;
+}
+
+#spring > div:last-of-type > img {
+	width: 48%;
+	padding-right: 1rem;
 }
 
 /* footer */
