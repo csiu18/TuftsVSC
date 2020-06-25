@@ -276,33 +276,25 @@ nav li > a:hover::before {
 	line-height: 1.5rem;
 }
 
-/* house background */
-#house {
-	width: 100%;
-	height: 100%;
-	background: url('../assets/images/house-background.svg') center center no-repeat;
-	background-size: cover;
-}
-
 /* events */
 #contact {
 	width: 100%;
-	height: 50%;
 	display: flex;
 }
 
 #contact > div {
-	width: 50%;
-	height: 100%;
+	width: 33.33%;
+	height: auto;
+	padding: 1rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-/* #contact > div:first-of-type {
-	background-color: #f0e7d5;
-} */
+#contact > div:first-of-type {
+	background-color: #e9ddc3;
+}
 
 #contact > div:first-of-type p, #contact > div:last-of-type p {
 	font-size: 1.5rem;
@@ -315,7 +307,7 @@ nav li > a:hover::before {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 40%;
+	width: 55%;
 }
 
 #contact input {
@@ -347,9 +339,9 @@ nav li > a:hover::before {
 	cursor: pointer;
 }
 
-/* #contact > div:last-of-type {
-	background-color: #000000;
-} */
+#contact > div:last-of-type {
+	background-color: #271f0e;
+}
 
 #contact > div:last-of-type p {
 	color: #ffffff;
@@ -372,7 +364,7 @@ nav li > a:hover::before {
 	align-items: center;
 	border-radius: 50%;
 	background-color: #ffffff;
-	color: #000000;
+	color: #271f0e;
 	margin-right: 1rem;
 }
 
@@ -387,14 +379,19 @@ nav li > a:hover::before {
 	align-items: flex-start;
 }
 
+/* roof background */
+#roof {
+	width: 33.33%;
+	height: 0;
+	padding-top: 12.5%;
+	background: url('../assets/images/roof-background.svg') no-repeat bottom;
+	background-size: contain;
+	margin: 0 auto;
+}
+
 /* gallery */
 #gallery {
-	width: 100%;
-	height: 50%;
-	display: flex; 
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
+	background-color: #cdaf74;
 }
 
 #gallery > * {
@@ -409,14 +406,13 @@ nav li > a:hover::before {
 }
 
 #gallery p {
-	width: 30%;
+	width: 70%;
 	text-align: center;
 	margin: 2rem 0;
 	line-height: 1.25rem;
 }
 
 #gallery a {
-	margin-bottom: 2rem;
 	text-decoration: none;
 	line-height: 1.5rem;
 	background-color: rgba(0, 0, 0, .75);
