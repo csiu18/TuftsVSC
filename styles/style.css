@@ -178,7 +178,6 @@ nav li > a:hover::before {
 
 /* about */
 #about {
-	height: 50%;
 	position: relative;
 	z-index: -1;
 	background: url('../assets/images/star-background.svg') fixed, #f0e7d5;
@@ -191,6 +190,7 @@ nav li > a:hover::before {
 	position: relative;
 	width: 70%;
 	text-align: center;	
+	margin: 5rem 0;
 	padding: 3rem;
 	background-color: #ffffff;
 	border: 3px #d49f55 solid;
@@ -613,8 +613,21 @@ footer {
 	#landing-page a {
 		font-size: .75rem;
 	}
+	/* about */
+	#about h1 {
+		font-size: 1.25rem;
+	}
+	#about p {
+		font-size: 1rem;
+		line-height: 1.25rem;
+	}
 }
 
 @media (max-width: 575.98px) { 
-
+	/* about */
+	#about > div {
+		width: 80%;
+		margin: 4rem 0;
+		padding: 2rem;
+	}
 }
