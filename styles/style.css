@@ -37,6 +37,10 @@ body {
 	color: #7b1c1e;
 }
 
+.hidden {
+	display: none;
+}
+
 /* navbar */
 nav {
 	padding: 0 5%;
@@ -543,4 +547,48 @@ footer {
 	text-align: center;
 	font: 400 .75rem 'Raleway', sans-serif;
 	line-height: 1.5rem;
+}
+
+/* container */
+#container {
+	margin-top: 4rem;
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section {
+	flex: 33.33%;
+	max-width: 33.33%;
+	padding: 0 .25rem;
+}
+
+.section img {
+	margin: .25rem 0;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* media queries */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+	.section {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 575.98px) { 
+
 }
