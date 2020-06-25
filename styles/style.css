@@ -685,6 +685,9 @@ footer {
 		font-size: 1.25rem;
 	}
 	/* events */
+	#events {
+		padding-bottom: 2rem;
+	}
 	#events h1 {
 		font-size: 1.25rem;
 	}
