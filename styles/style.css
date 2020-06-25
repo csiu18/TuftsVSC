@@ -432,6 +432,7 @@ nav li > a:hover::before {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	padding: 2rem;
 }
 
 #events h1 {
@@ -442,7 +443,7 @@ nav li > a:hover::before {
 #events > h1 {
 	padding-bottom: .5rem;
 	border-bottom: 3px #d39035 solid;
-	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 #events p {
@@ -453,11 +454,10 @@ nav li > a:hover::before {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 2rem;
 }
 
 #fall {
-	padding-bottom: 1rem !important;
+	padding-bottom: 1rem;
 }
 
 #fall > div, #spring > div {
@@ -492,8 +492,6 @@ nav li > a:hover::before {
 }
 
 #fall > div:last-of-type, #spring > div:last-of-type {
-	display: flex;
-	justify-content: center;
 	padding-top: 1rem;
 }
 
@@ -510,7 +508,7 @@ nav li > a:hover::before {
 }
 
 #spring {
-	padding-top: 1rem !important;
+	padding-top: 1rem;
 }
 
 #spring > div:first-of-type > iframe {
@@ -573,6 +571,16 @@ footer {
 		width: 60vw;
 		height: 60vw;
 	}
+	/* events */
+	#events p {
+		font-size: 1rem;
+	}
+	#fall > div:first-of-type > div, #spring > div:first-of-type > div {
+		padding: 1rem 1.25rem;
+	}	
+	#fall > div:first-of-type > div > *, #spring > div:first-of-type > div > * {
+		padding: .5rem 0;
+	}
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -590,9 +598,61 @@ footer {
 		width: 20vw;
 		height: 20vw;
 	}
+	/* events */
+	#events {
+		padding: 1rem;
+	}
+	#events h1 {
+		font-size: 1.25rem;
+	}
+	#events > h1 {
+		font-size: 1.75rem;
+		margin-top: 1rem;
+	}
+	#events p {
+		font-size: .75rem;
+	}
+	#fall {
+		padding-bottom: .5rem;
+	}
+	#fall > div:first-of-type > div, #spring > div:first-of-type > div {
+		padding: .75rem 1rem;
+	}
+	#fall > div:first-of-type > div > *, #spring > div:first-of-type > div > * {
+		padding: .25rem 0;
+	}
+	#fall > div:first-of-type, #spring > div:first-of-type {
+		padding-bottom: .5rem;
+	}
+	#fall > div:first-of-type > div {
+		margin-right: 1rem;
+	}
+	#fall > div:last-of-type > img:first-of-type {
+		padding-right: .5rem;
+	}
+	#fall > div:last-of-type > img:last-of-type {
+		padding-left: .5rem;
+	}
+	#fall > div:last-of-type, #spring > div:last-of-type {
+		padding-top: .5rem;
+	}
+	#spring {
+		padding-top: .5rem;
+	}
+	#spring > div:first-of-type > div {
+		margin-left: 1rem;
+	}
+	#spring > div:last-of-type > iframe {
+		padding-left: .5rem;
+	}
+	#spring > div:last-of-type > img {
+		padding-right: .5rem;
+	}
+	
 }
 
 /* Small devices (landscape phones, less than 768px) */
+/* TODO: reduce h1s */
 @media (max-width: 767.98px) { 
 	/* gallery */
 	.section {
@@ -623,6 +683,54 @@ footer {
 	/* e-board */
 	#e-board h1 {
 		font-size: 1.25rem;
+	}
+	/* events */
+	#events h1 {
+		font-size: 1.25rem;
+	}
+	#events p {
+		font-size: 1rem;
+	}
+	#fall > div:first-of-type > div, #spring > div:first-of-type > div {
+		padding: 1.25rem;
+	}
+	#fall > div:first-of-type > div > *, #spring > div:first-of-type > div > * {
+		padding: .5rem 0;
+	}
+	#fall > div, #spring > div {
+		flex-direction: column;
+		align-items: center;
+	}
+	#fall > div:first-of-type > div {
+		width: 90%;
+		margin: 0 0 1rem 0;
+	}
+	#fall > div:first-of-type > img{
+		width: 90%;
+	}
+	#fall > div:last-of-type > img {
+		width: 90%;
+		margin: 0 0 1rem 0;
+	}
+	#fall > div:last-of-type > img:first-of-type,#fall > div:last-of-type > img:last-of-type {
+		padding: 0;
+	}
+	#spring > div:first-of-type {
+		flex-direction: column-reverse;
+	}
+	#spring > div:first-of-type > div {
+		width: 90%; 
+		margin: 0 0 1rem 0;
+	}
+	#spring > div:last-of-type > img {
+		width: 90%;
+		margin: 0 0 1rem 0;
+	}
+	#spring > div:last-of-type > * {
+		padding: 0 !important;
+	}
+	#spring iframe {
+		width: 90% !important;
 	}
 }
 
