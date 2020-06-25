@@ -560,11 +560,11 @@ footer {
 .section {
 	flex: 33.33%;
 	max-width: 33.33%;
-	padding: 0 .25rem;
+	padding: 0 .375rem;
 }
 
 .section img {
-	margin: .25rem 0;
+	margin: .375rem 0;
 	vertical-align: middle;
 	width: 100%;
 }
