@@ -135,12 +135,13 @@ nav li > a:hover::before {
 	z-index: -1;
 	background: radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .25)), 
 	url('../assets/images/group-photo.jpg') no-repeat center;
-	background-size: 100%;
+	background-size: cover;
 }
 
 #landing-page h1 {
 	font: 800 3rem 'Raleway', sans-serif;
 	letter-spacing: .1rem;
+	text-align: center;
 }
 
 #landing-page p {
@@ -166,8 +167,8 @@ nav li > a:hover::before {
 }
 
 #landing-page .pattern {
-	width: 50vw;
-	height: 50vw;
+	width: 55vw;
+	height: 55vw;
 	border: 1px solid #ffffff;
 	position: absolute;
 	transform: rotate(45deg);
@@ -573,19 +574,44 @@ footer {
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
-
+	/* landing-page */
+	#landing-page .pattern {
+		width: 60vw;
+		height: 60vw;
+	}
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
-
+	/* landing-page */
+	#landing-page h1 {
+		font-size: 2rem;
+	}
+	#landing-page p {
+		font-size: .75rem;
+		line-height: 1rem;
+	}
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
+	/* gallery */
 	.section {
 		flex: 100%;
 		max-width: 100%;
+	}
+	/* landing-page */
+	#landing-page .pattern {
+		display: none;
+	}
+	#landing-page h1 {
+		font-size: 1.5rem;
+	}
+	#landing-page p {
+		width: 60%;
+	}
+	#landing-page a {
+		font-size: .75rem;
 	}
 }
 
