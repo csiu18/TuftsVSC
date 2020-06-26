@@ -18,18 +18,15 @@ window.onload = function () {
 			image.alt = `gallery photo ${imageID}`;
 			section.appendChild(image);
 			imageID++;
-			// if (i === NUM_COLUMNS - 1 && j === IMAGES_PER_COL - 1)
-			// 	displayImages();
+			if (i === NUM_COLUMNS - 1 && j === IMAGES_PER_COL - 1)
+				displayImages();
 		}
 	}
 
-	// implement infinite scrolling **
-
-	// function displayImages() {
-	// 	let photos = document.querySelectorAll('.section img');
-	// 	for (let i = 0; i < NUM_IMAGES; i++) {
-	// 		photos[i].style.visibility = 'visible';
-	// 		photos[i].className = 'scale-in-center';
-	// 	}
-	// }
+	function displayImages() {
+		let photos = document.querySelectorAll('.section img');
+		for (let i = 0; i < NUM_IMAGES; i++) {
+			photos[i].className = 'scale-in-center';
+		}
+	}
 };
