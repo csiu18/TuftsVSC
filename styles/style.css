@@ -286,7 +286,7 @@ nav button {
 	line-height: 1.5rem;
 }
 
-/* events */
+/* contact */
 #contact {
 	width: 100%;
 	display: flex;
@@ -462,10 +462,6 @@ nav button {
 	margin-bottom: 2rem;
 }
 
-#events p {
-	font-size: 1.25rem;
-}
-
 #events > div {
 	width: 100%;
 	display: flex;
@@ -590,10 +586,6 @@ footer {
 	#landing-page .pattern {
 		width: 60vw;
 		height: 60vw;
-	}
-	/* events */
-	#events p {
-		font-size: 1rem;
 	}
 	#fall > div:first-of-type > div, #spring > div:first-of-type > div {
 		padding: 1rem 1.25rem;
