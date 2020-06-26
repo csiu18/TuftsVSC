@@ -572,6 +572,7 @@ footer {
 	margin: .375rem 0;
 	vertical-align: middle;
 	width: 100%;
+	visibility: hidden;
 }
 
 /* media queries */

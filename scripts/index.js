@@ -29,19 +29,12 @@ window.onresize = function () {
 function resizeVideos() {
 	if (!matchMediaQuery('(max-width: 767.98px)')) {
 		// set video height to image
-		const video1 = document.querySelector(
-			'#spring > div:first-of-type > iframe'
-		);
-		const picture1 = document.querySelector(
-			'#spring > div:first-of-type > div'
-		);
 		const video2 = document.querySelector(
 			'#spring > div:last-of-type > iframe'
 		);
 		const picture2 = document.querySelector(
 			'#spring > div:last-of-type > img'
 		);
-		video1.style.height = picture1.style.height;
 		video2.style.height = picture2.style.height;
 	} else {
 		const videos = document.querySelectorAll('iframe');
