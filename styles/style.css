@@ -300,6 +300,7 @@ nav li > a:hover::before {
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin: 1rem;
+	text-align: center;
 }
 
 #contact form {
@@ -648,7 +649,28 @@ footer {
 	#spring > div:last-of-type > img {
 		padding-right: .5rem;
 	}
-	
+	/* gallery */
+	#gallery h1 {
+		font-size: 1.25rem;
+	}
+	#gallery p {
+		margin: 1rem 0;
+		font-size: .75rem;
+	}
+	/* contact */
+	#contact > div {
+		padding: .5rem 0;
+	}
+	#contact form {
+		width: 80%;
+	}
+	#contact > div:first-of-type p, #contact > div:last-of-type p {
+		font-size: 1.25rem;
+	}
+	#contact input, #contact > div:last-of-type a {
+		font-size: .75rem;
+		margin: .25rem;
+	}
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -735,6 +757,38 @@ footer {
 	#spring iframe {
 		width: 90% !important;
 	}
+	/* roof background*/
+	#roof {
+		width: 100%;
+		padding-top: 37.5%;
+	}
+	/* contact */
+	#contact {
+		flex-direction: column;
+	}
+	#contact > div {
+		width: 100%;
+		padding: 1rem 0;
+	}
+	#contact > div:not(#gallery) {
+		order: 2;
+	}
+	#contact input, #contact > div:last-of-type a {
+		font-size: 1rem;
+	}
+	/* gallery */
+	#gallery {
+		order: 1;
+	}
+	#gallery h1 {
+		font-size: 1.5rem;
+	}
+	#gallery p {
+		font-size: 1rem;
+	}
+	#gallery > * {
+		bottom: 4rem;
+	}
 }
 
 @media (max-width: 575.98px) { 
@@ -751,5 +805,9 @@ footer {
 	#e-board .image {
 		width: 60vw;
 		height: 60vw;
+	}
+	/* gallery */
+	#gallery > * {
+		bottom: 2rem;
 	}
 }
