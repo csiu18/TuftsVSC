@@ -2,7 +2,7 @@ window.onload = function () {
 	const NUM_IMAGES = 27;
 	const NUM_COLUMNS = 3;
 	const IMAGES_PER_COL = NUM_IMAGES / NUM_COLUMNS;
-	const PATH = '../assets/gallery/';
+	const PATH = 'assets/gallery/';
 	const IMG_TYPE = '.jpg';
 
 	let container = document.querySelector('#container');
