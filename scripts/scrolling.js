@@ -12,9 +12,9 @@ $(document).ready(function () {
 			// Prevent default anchor click behavior
 			event.preventDefault();
 			// If on gallery, refresh to homepage
-			if (window.location.pathname === '/vsc-website/gallery.html') {
+			if (window.location.pathname === '/gallery.html') {
 				Cookies.set('scroll', this.hash);
-				window.location.replace('/vsc-website');
+				window.location.replace('/');
 			}
 			scrollToHash(this.hash);
 		} // End if
