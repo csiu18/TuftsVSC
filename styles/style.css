@@ -90,6 +90,16 @@ nav li > a:hover::before {
 	width: 100%;
 }
 
+nav button {
+	display: none;
+	border: none; 
+	cursor: pointer; 
+	outline: none; 
+	background-color: transparent;
+	padding: .5rem;
+	font-size: 1.25rem;
+}
+
 /* navbar logo */
 #logo {
 	display: flex;
@@ -567,6 +577,10 @@ footer {
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
+	/* nav */
+	nav ul {
+		width: 50%;
+	}
 	/* landing-page */
 	#landing-page .pattern {
 		width: 60vw;
@@ -586,6 +600,10 @@ footer {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
+	/* nav */
+	nav ul {
+		width: 55%;
+	}
 	/* landing-page */
 	#landing-page h1 {
 		font-size: 2rem;
@@ -675,7 +693,11 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 /* TODO: reduce h1s */
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
+	/* nav */
+	nav ul {
+		width: 60%;
+	} 
 	/* gallery */
 	.section {
 		flex: 100%;
@@ -792,6 +814,31 @@ footer {
 }
 
 @media (max-width: 575.98px) { 
+	/* nav */
+	nav ul {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, .95);
+		margin-top: 4rem;
+	}
+	nav li {
+		margin: .75rem 0;
+		position: relative;
+		bottom: 4rem;
+	}
+	nav button {
+		display: block;
+	}
+	nav li > a {
+		font-size: 1.25rem;
+	}
 	/* about */
 	#about > div {
 		width: 80%;

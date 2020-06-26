@@ -55,3 +55,22 @@ function resizeVideos() {
 function matchMediaQuery(query) {
 	return window.matchMedia(query).matches;
 }
+
+function toggleNav() {
+	const nav = document.querySelector('nav ul');
+	nav.style.display === 'inherit' ? hideNav() : showNav();
+}
+
+function hideNav() {
+	const nav = document.querySelector('nav ul');
+	nav.className = 'slide-out-right';
+	setTimeout(function () {
+		nav.style.display = 'none';
+	}, 500);
+}
+
+function showNav() {
+	const nav = document.querySelector('nav ul');
+	nav.style.display = 'inherit';
+	nav.className = 'tilt-in-fwd-tr';
+}
