@@ -10,6 +10,7 @@ window.onload = function () {
 
 	for (let i = 0; i < NUM_COLUMNS; i++) {
 		let section = document.createElement('div');
+		container.appendChild(section);
 		section.className = 'section';
 		for (let j = 0; j < IMAGES_PER_COL; j++) {
 			let image = document.createElement('img');
@@ -18,6 +19,5 @@ window.onload = function () {
 			section.appendChild(image);
 			imageID++;
 		}
-		container.appendChild(section);
 	}
 };
