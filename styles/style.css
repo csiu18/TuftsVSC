@@ -348,6 +348,7 @@ nav button {
 	background-color: rgba(0, 0, 0, .75);
 	color: #ffffff;
 	cursor: pointer;
+	-webkit-appearance: none;
 }
 
 #contact > div:last-of-type {
