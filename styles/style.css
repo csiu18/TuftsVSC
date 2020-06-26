@@ -392,10 +392,14 @@ nav li > a:hover::before {
 /* gallery */
 #gallery {
 	background-color: #cdaf74;
+	padding: 0 !important;
+	justify-content: flex-start !important;
 }
 
 #gallery > * {
 	color: #3e3116;
+	position: relative;
+	bottom: 1rem;
 }
 
 #gallery h1 {
