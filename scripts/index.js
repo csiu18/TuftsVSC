@@ -9,12 +9,12 @@ window.onload = function () {
 		'cindy.png',
 		'britnie.png',
 	];
-	const offset = '../assets/profiles/';
+	const PATH = 'assets/profiles/';
 	const profileElems = document.querySelectorAll('.profile .image');
 
 	for (let i = 0; i < pictures.length; i++) {
 		profileElems[i].style.background =
-			'url(' + offset + pictures[i] + ') center';
+			'url(' + PATH + pictures[i] + ') center';
 		profileElems[i].style.backgroundSize = 'cover';
 	}
 
