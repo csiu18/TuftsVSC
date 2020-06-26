@@ -14,7 +14,7 @@ $(document).ready(function () {
 			// If on gallery, refresh to homepage
 			if (window.location.pathname === '/gallery.html') {
 				Cookies.set('scroll', this.hash);
-				window.location.replace('/');
+				window.location.replace('/vsc-website');
 			}
 			scrollToHash(this.hash);
 		} // End if
