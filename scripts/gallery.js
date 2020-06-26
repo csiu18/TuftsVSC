@@ -3,7 +3,7 @@ window.onload = function () {
 	const NUM_COLUMNS = 3;
 	const IMAGES_PER_COL = NUM_IMAGES / NUM_COLUMNS;
 	const PATH = 'assets/gallery/';
-	const IMG_TYPE = '.jpg';
+	const IMG_TYPE = '.jp2';
 
 	let container = document.querySelector('#container');
 	let imageID = 0;
