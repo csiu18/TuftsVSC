@@ -1,21 +1,20 @@
 window.onload = function () {
 	// set profile pictures
 	const pictures = [
-		'jen',
-		'tu-anh',
-		'daniel',
-		'huyen',
-		'ricki',
-		'cindy',
-		'britnie',
+		'jen.png',
+		'tu-anh.png',
+		'daniel.png',
+		'huyen.png',
+		'ricki.png',
+		'cindy.png',
+		'britnie.png',
 	];
 	const PATH = 'assets/profiles/';
-	const IMG_TYPE = '.jp2';
 	const profileElems = document.querySelectorAll('.profile .image');
 
 	for (let i = 0; i < pictures.length; i++) {
 		profileElems[i].style.background =
-			'url(' + PATH + pictures[i] + IMG_TYPE + ') center';
+			'url(' + PATH + pictures[i] + ') center';
 		profileElems[i].style.backgroundSize = 'cover';
 	}
 
