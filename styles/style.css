@@ -398,6 +398,8 @@ nav button {
 	background: url('../assets/images/roof-background.svg') no-repeat bottom;
 	background-size: contain;
 	margin: 0 auto;
+	position: relative;
+	top: 1px;
 }
 
 /* gallery */
