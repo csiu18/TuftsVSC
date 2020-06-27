@@ -19,7 +19,7 @@ window.onload = function () {
 			'url(' + PATH + pictures[i] + IMG_TYPE + ') center';
 		profileElems[i].style.backgroundSize = 'cover';
 	}
-
+	// resize videos
 	resizeVideos();
 };
 
