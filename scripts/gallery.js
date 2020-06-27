@@ -3,6 +3,7 @@ const NUM_COL = 3;
 const IMGS_PER_COL = NUM_IMAGES / NUM_COL;
 const PATH = 'assets/gallery/';
 const IMG_TYPE = '.jpg';
+const ANIMATION = 'scale-in-center';
 const imageURLS = new Array();
 const images = new Array();
 const reset = new Array();
@@ -24,11 +25,11 @@ window.onload = function () {
 	let intersectionObserver = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				entry.target.className = 'scale-in-center';
+				entry.target.className = ANIMATION;
 			} else {
 				if (!reset[entry.target.id]) {
 					reset[entry.target.id] = true;
-					entry.target.classList.remove('scale-in-center');
+					entry.target.classList.remove(ANIMATION);
 				}
 			}
 		});
