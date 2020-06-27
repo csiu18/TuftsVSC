@@ -12,8 +12,14 @@ let indices = {
 };
 
 function loadImage(section) {
+	let id = parseInt(section.id.slice(-1));
+	if (
+		matchMediaQuery('(max-width: 767.98px)') &&
+		indices[`section${id - 1}`] < IMGS_PER_COL
+	)
+		return;
 	let image = document.createElement('img');
-	let imageID = parseInt(section.id.slice(-1)) * 9 + indices[section.id]++;
+	let imageID = id * 9 + indices[section.id]++;
 	image.src = PATH + imageID + IMG_TYPE;
 	image.alt = `gallery photo ${imageID}`;
 	section.appendChild(image);
