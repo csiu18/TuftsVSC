@@ -14,6 +14,7 @@ let indices = {
 function loadImage(section) {
 	let id = parseInt(section.id.slice(-1));
 	if (
+		id !== 0 &&
 		matchMediaQuery('(max-width: 767.98px)') &&
 		indices[`section${id - 1}`] < IMGS_PER_COL
 	)
