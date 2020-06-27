@@ -11,7 +11,7 @@ window.onload = function () {
 		'britnie',
 	];
 	const PATH = 'assets/profiles/';
-	const IMG_TYPE = '.png';
+	const IMG_TYPE = '.jpg';
 	const profileElems = document.querySelectorAll('.profile .image');
 
 	for (let i = 0; i < pictures.length; i++) {
