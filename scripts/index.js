@@ -1,4 +1,13 @@
 window.onload = function () {
+	// animate landing page
+	setTimeout(function () {
+		const landingPage = document.querySelector('#landing-page');
+		for (let child of landingPage.children) {
+			if (child.nodeName === 'H1') child.className = 'tracking-in-expand';
+			else if (child.nodeName !== 'DIV')
+				child.className = 'text-focus-in';
+		}
+	}, 200);
 	if (window.location.pathname === '/gallery.html') return;
 	// set profile pictures
 	const pictures = [

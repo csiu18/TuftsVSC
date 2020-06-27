@@ -38,6 +38,10 @@ body {
 	color: #7b1c1e;
 }
 
+.invisible {
+	opacity: 0;
+}
+
 .avoid-wrap {
 	display: inline-block;
 }
@@ -147,6 +151,10 @@ nav button {
 	background: radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .25)), 
 	url('../assets/images/group-photo.jpg') no-repeat center;
 	background-size: cover;
+}
+
+#landing-page > * {
+	opacity: 0;
 }
 
 #landing-page h1 {
