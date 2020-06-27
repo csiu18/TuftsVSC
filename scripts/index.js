@@ -8,6 +8,26 @@ window.onload = function () {
 				child.className = 'text-focus-in';
 		}
 	}, 200);
+	// animate profiles
+	let options = {
+		root: null,
+		rootMargin: '0px',
+		threshold: 1.0,
+	};
+	let firstProfile = document.querySelector('.profile');
+	let intersectionObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				let profiles = document.querySelectorAll('.profile');
+				for (let i = 0; i < profiles.length; i++) {
+					setTimeout(function () {
+						profiles[i].classList.add('fade-in');
+					}, i * 200);
+				}
+			}
+		});
+	}, options);
+	intersectionObserver.observe(firstProfile);
 	if (window.location.pathname === '/gallery.html') return;
 	// set profile pictures
 	const pictures = [

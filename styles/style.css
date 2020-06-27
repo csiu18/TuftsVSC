@@ -20,7 +20,7 @@ body::after {
 	z-index:-1; 
 	content:
   		url(../assets/images/group-photo.jpg)
-  		url(assets/images/just-logo.svg);
+  		url(../assets/images/just-logo.svg);
 }
 
 .divider {
@@ -282,6 +282,7 @@ nav button {
 
 #e-board .profile {
 	margin: 0 .5rem;
+	opacity: 0;
 }
 
 #e-board .image {
