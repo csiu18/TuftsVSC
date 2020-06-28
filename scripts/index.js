@@ -51,8 +51,11 @@ window.onload = function () {
 };
 
 window.onresize = function () {
+<<<<<<< HEAD
 	if (matchMediaQuery('(max-width: 575.98px)')) hideNav(false);
 	else showNav(false);
+=======
+>>>>>>> parent of bfed0a3... fixed bug with resizing navbar
 	if (window.location.pathname !== '/gallery.html') resizeVideos();
 };
 
@@ -89,29 +92,19 @@ function matchMediaQuery(query) {
 
 function toggleNav() {
 	const nav = document.querySelector('nav ul');
-	nav.style.display === 'inherit' ? hideNav(true) : showNav(true);
+	nav.style.display === 'inherit' ? hideNav() : showNav();
 }
 
-function hideNav(toggleAnimation) {
+function hideNav() {
 	const nav = document.querySelector('nav ul');
-	resetAnimation(nav);
-	if (toggleAnimation) nav.className = 'slide-out-right';
-	setTimeout(
-		function () {
-			nav.style.display = 'none';
-		},
-		toggleAnimation ? 500 : 0
-	);
+	nav.className = 'slide-out-right';
+	setTimeout(function () {
+		nav.style.display = 'none';
+	}, 500);
 }
 
-function showNav(toggleAnimation) {
+function showNav() {
 	const nav = document.querySelector('nav ul');
-	resetAnimation(nav);
 	nav.style.display = 'inherit';
-	if (toggleAnimation) nav.className = 'tilt-in-fwd-tr';
-}
-
-function resetAnimation(nav) {
-	nav.classList.remove('slide-out-right');
-	nav.classList.remove('tilt-in-fwd-tr');
+	nav.className = 'tilt-in-fwd-tr';
 }

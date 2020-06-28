@@ -22,7 +22,6 @@ $(document).ready(function () {
 			if (matchMediaQuery('(max-width: 575.98px)')) hideNav(true);
 			// Store hash from gallery page
 			if (window.location.pathname === '/gallery.html') {
-				// If on gallery, refresh to homepage
 				Cookies.set('scroll', this.hash);
 				window.location.replace('/');
 			}
