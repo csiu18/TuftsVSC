@@ -10,8 +10,6 @@ window.onload = function () {
 	}, 200);
 	// animate profiles
 	let options = {
-		root: null,
-		rootMargin: '0px',
 		threshold: 1.0,
 	};
 	let firstProfile = document.querySelector('.profile');
