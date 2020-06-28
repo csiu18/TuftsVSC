@@ -6,6 +6,16 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-		.then((response) => console.log('Success!', response))
+		.then((response) => {
+			let section = document.querySelector(
+				'#contact > div:first-of-type'
+			);
+			for (let childElem of section.children) {
+				if (childElem.classList.contains('hidden')) {
+					childElem.classList.remove('hidden');
+					childElem.classList.add('fade-in');
+				} else childElem.classList.add('hidden');
+			}
+		})
 		.catch((error) => console.error('Error!', error.message));
 });
