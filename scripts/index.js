@@ -8,24 +8,6 @@ window.onload = function () {
 				child.className = 'text-focus-in';
 		}
 	}, 200);
-	// animate profiles
-	let options = {
-		threshold: 1.0,
-	};
-	let firstProfile = document.querySelector('.profile');
-	let intersectionObserver = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				let profiles = document.querySelectorAll('.profile');
-				for (let i = 0; i < profiles.length; i++) {
-					setTimeout(function () {
-						profiles[i].classList.add('fade-in');
-					}, i * 200);
-				}
-			}
-		});
-	}, options);
-	intersectionObserver.observe(firstProfile);
 	if (window.location.pathname === '/gallery.html') return;
 	// set profile pictures
 	const pictures = [
@@ -46,16 +28,31 @@ window.onload = function () {
 			'url(' + PATH + pictures[i] + IMG_TYPE + ') center';
 		profileElems[i].style.backgroundSize = 'cover';
 	}
+	// animate profiles
+	let options = {
+		threshold: 1.0,
+	};
+	let firstProfile = document.querySelector('.profile');
+	let intersectionObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				let profiles = document.querySelectorAll('.profile');
+				for (let i = 0; i < profiles.length; i++) {
+					setTimeout(function () {
+						profiles[i].classList.add('fade-in');
+					}, i * 200);
+				}
+			}
+		});
+	}, options);
+	intersectionObserver.observe(firstProfile);
 	// resize videos
 	resizeVideos();
 };
 
 window.onresize = function () {
-<<<<<<< HEAD
 	if (matchMediaQuery('(max-width: 575.98px)')) hideNav(false);
 	else showNav(false);
-=======
->>>>>>> parent of bfed0a3... fixed bug with resizing navbar
 	if (window.location.pathname !== '/gallery.html') resizeVideos();
 };
 
@@ -92,19 +89,29 @@ function matchMediaQuery(query) {
 
 function toggleNav() {
 	const nav = document.querySelector('nav ul');
-	nav.style.display === 'inherit' ? hideNav() : showNav();
+	nav.style.display === 'inherit' ? hideNav(true) : showNav(true);
 }
 
-function hideNav() {
+function hideNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
-	nav.className = 'slide-out-right';
-	setTimeout(function () {
-		nav.style.display = 'none';
-	}, 500);
+	resetAnimation(nav);
+	if (toggleAnimation) nav.className = 'slide-out-right';
+	setTimeout(
+		function () {
+			nav.style.display = 'none';
+		},
+		toggleAnimation ? 500 : 0
+	);
 }
 
-function showNav() {
+function showNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
+	resetAnimation(nav);
 	nav.style.display = 'inherit';
-	nav.className = 'tilt-in-fwd-tr';
+	if (toggleAnimation) nav.className = 'tilt-in-fwd-tr';
+}
+
+function resetAnimation(nav) {
+	nav.classList.remove('slide-out-right');
+	nav.classList.remove('tilt-in-fwd-tr');
 }
