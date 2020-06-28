@@ -1,6 +1,6 @@
 // SOURCE: https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
 const scriptURL =
-	'https://script.google.com/macros/s/AKfycbwSCJsW3BkGU276xAkuWZbu7h9Gk3MzwqBNyyRb-LpZIj5fDFs/exec';
+	'https://script.google.com/macros/s/AKfycbwrmpZ0MimAA4VlhhgKIf65EGn2XLql5RbkJONDzMTtac1htGcc/exec';
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
