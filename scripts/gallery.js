@@ -15,11 +15,6 @@ window.onload = function () {
 		imageURLS[i] = PATH + i + IMG_TYPE;
 	}
 	preload(...imageURLS);
-	let options = {
-		root: null,
-		rootMargin: '0px',
-		threshold: 1.0,
-	};
 	// add animation to images
 	let images = document.querySelectorAll('.section img');
 	let intersectionObserver = new IntersectionObserver((entries) => {
@@ -34,7 +29,7 @@ window.onload = function () {
 			}
 		});
 	});
-	for (let image of images) intersectionObserver.observe(image, options);
+	for (let image of images) intersectionObserver.observe(image);
 };
 
 window.onscroll = function () {
