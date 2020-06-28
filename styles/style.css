@@ -57,6 +57,10 @@ body::after {
 	opacity: 0;
 }
 
+.hidden {
+	display: none !important;
+}
+
 .avoid-wrap {
 	display: inline-block;
 }
@@ -376,6 +380,19 @@ nav button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;	
+}
+
+#contact > div:first-of-type > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#contact > div:first-of-type > div img {
+	width: 25%;
+	margin: 1rem;
 }
 
 #contact > div:last-of-type {
