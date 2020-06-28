@@ -53,7 +53,6 @@ window.onload = function () {
 };
 
 window.onresize = function () {
-	const nav = document.querySelector('nav ul');
 	if (matchMediaQuery('(max-width: 575.98px)')) hideNav(false);
 	else showNav(false);
 	if (window.location.pathname !== '/gallery.html') resizeVideos();

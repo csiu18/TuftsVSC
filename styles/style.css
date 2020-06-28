@@ -100,7 +100,7 @@ nav li > a::before {
 	transition: all .3s ease-in-out;
 }
 
-nav li > a:hover::before {
+nav li > a:hover::before, .underline a::before {
 	visibility: visible;
 	width: 100%;
 }

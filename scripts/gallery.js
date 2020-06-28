@@ -38,11 +38,9 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
-	if (!fullReset) {
-		console.log(reset);
-		for (let i = 0; i < reset.length; i++) reset[i] = true;
-		fullReset = true;
-	}
+	if (fullReset) return;
+	for (let i = 0; i < reset.length; i++) reset[i] = true;
+	fullReset = true;
 };
 
 function preload(...urls) {
