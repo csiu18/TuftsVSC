@@ -53,6 +53,9 @@ window.onload = function () {
 };
 
 window.onresize = function () {
+	const nav = document.querySelector('nav ul');
+	if (matchMediaQuery('(max-width: 575.98px)')) hideNav(false);
+	else showNav(false);
 	if (window.location.pathname !== '/gallery.html') resizeVideos();
 };
 
@@ -89,19 +92,29 @@ function matchMediaQuery(query) {
 
 function toggleNav() {
 	const nav = document.querySelector('nav ul');
-	nav.style.display === 'inherit' ? hideNav() : showNav();
+	nav.style.display === 'inherit' ? hideNav(true) : showNav(true);
 }
 
-function hideNav() {
+function hideNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
-	nav.className = 'slide-out-right';
-	setTimeout(function () {
-		nav.style.display = 'none';
-	}, 500);
+	resetAnimation(nav);
+	if (toggleAnimation) nav.className = 'slide-out-right';
+	setTimeout(
+		function () {
+			nav.style.display = 'none';
+		},
+		toggleAnimation ? 500 : 0
+	);
 }
 
-function showNav() {
+function showNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
+	resetAnimation(nav);
 	nav.style.display = 'inherit';
-	nav.className = 'tilt-in-fwd-tr';
+	if (toggleAnimation) nav.className = 'tilt-in-fwd-tr';
+}
+
+function resetAnimation(nav) {
+	nav.classList.remove('slide-out-right');
+	nav.classList.remove('tilt-in-fwd-tr');
 }

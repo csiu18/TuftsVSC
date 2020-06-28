@@ -11,8 +11,9 @@ $(document).ready(function () {
 		if (this.hash !== '') {
 			// Prevent default anchor click behavior
 			event.preventDefault();
-			// If on gallery, refresh to homepage
+			if (matchMediaQuery('(max-width: 575.98px)')) hideNav(true);
 			if (window.location.pathname === '/gallery.html') {
+				// If on gallery, refresh to homepage
 				Cookies.set('scroll', this.hash);
 				window.location.replace('/');
 			}
