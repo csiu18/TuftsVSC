@@ -410,6 +410,17 @@ nav button {
 	justify-content: center;
 	align-items: center;
 	margin: .5rem;
+	padding-right: 1rem;
+	border-radius: .75rem;
+	background: linear-gradient(to right, #ffffff 50%, transparent 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .25s ease;
+}
+
+#contact > div:last-of-type a:hover {
+	color: #271f0e;
+	background-position: left bottom;
 }
 
 .icon {
