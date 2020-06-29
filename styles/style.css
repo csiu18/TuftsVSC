@@ -367,7 +367,7 @@ nav button {
 }
 
 #contact input[type='submit']:focus, #contact input[type='submit']:hover, #gallery a:hover {
-	background-color: #271f0e;
+	background-color: #000000;
 }
 
 #contact input[type='text'] {
