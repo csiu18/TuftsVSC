@@ -9,43 +9,8 @@ window.onload = function () {
 		}
 	}, 200);
 	if (window.location.pathname === '/gallery.html') return;
-	// set profile pictures
-	const pictures = [
-		'jen',
-		'tu-anh',
-		'daniel',
-		'huyen',
-		'ricki',
-		'cindy',
-		'britnie',
-	];
-	const PATH = 'assets/profiles/';
-	const IMG_TYPE = '.jpg';
-	const profileElems = document.querySelectorAll('.profile .image');
-
-	for (let i = 0; i < pictures.length; i++) {
-		profileElems[i].style.background =
-			'url(' + PATH + pictures[i] + IMG_TYPE + ') center';
-		profileElems[i].style.backgroundSize = 'cover';
-	}
-	// animate profiles
-	let options = {
-		threshold: 1.0,
-	};
-	let firstProfile = document.querySelector('.profile');
-	let intersectionObserver = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				let profiles = document.querySelectorAll('.profile');
-				for (let i = 0; i < profiles.length; i++) {
-					setTimeout(function () {
-						profiles[i].classList.add('fade-in');
-					}, i * 200);
-				}
-			}
-		});
-	}, options);
-	intersectionObserver.observe(firstProfile);
+	addProfiles();
+	animateEvents();
 	// resize videos
 	resizeVideos();
 };
@@ -114,4 +79,70 @@ function showNav(toggleAnimation) {
 function resetAnimation(nav) {
 	nav.classList.remove('slide-out-right');
 	nav.classList.remove('tilt-in-fwd-tr');
+}
+
+function addProfiles() {
+	// set profile pictures
+	const pictures = [
+		'jen',
+		'tu-anh',
+		'daniel',
+		'huyen',
+		'ricki',
+		'cindy',
+		'britnie',
+	];
+	const PATH = 'assets/profiles/';
+	const IMG_TYPE = '.jpg';
+	const profileElems = document.querySelectorAll('.profile .image');
+
+	for (let i = 0; i < pictures.length; i++) {
+		profileElems[i].style.background =
+			'url(' + PATH + pictures[i] + IMG_TYPE + ') center';
+		profileElems[i].style.backgroundSize = 'cover';
+	}
+	// animate profiles
+	let options = {
+		threshold: 1.0,
+	};
+	let firstProfile = document.querySelector('.profile');
+	let intersectionObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				let profiles = document.querySelectorAll('.profile');
+				for (let i = 0; i < profiles.length; i++) {
+					setTimeout(function () {
+						profiles[i].classList.add('fade-in');
+					}, i * 200);
+				}
+			}
+		});
+	}, options);
+	intersectionObserver.observe(firstProfile);
+}
+
+function animateEvents() {
+	let sections = document.querySelectorAll('#events > div > div');
+	let options = {
+		threshold: 0.5,
+	};
+	let intersectionObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				let childrenElem = entry.target.children;
+				let description = entry.target.querySelector('.event-desc');
+				for (let i = 0; i < childrenElem.length; i++) {
+					if (description) {
+						if (childrenElem[i] === description) continue;
+						else childrenElem[i].classList.add('slide-in-top');
+					} else {
+						if (i === 0)
+							childrenElem[i].classList.add('slide-in-left');
+						else childrenElem[i].classList.add('slide-in-right');
+					}
+				}
+			}
+		});
+	}, options);
+	for (let section of sections) intersectionObserver.observe(section);
 }
