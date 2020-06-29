@@ -366,6 +366,10 @@ nav button {
 	border-color: transparent;
 }
 
+#contact input[type='submit']:focus, #contact input[type='submit']:hover, #gallery a:hover {
+	background-color: #271f0e;
+}
+
 #contact input[type='text'] {
 	width: 100%;
 	text-align: center;
@@ -380,6 +384,7 @@ nav button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;	
+	transition: all .5s;
 }
 
 #contact > div:first-of-type > div {
@@ -415,7 +420,7 @@ nav button {
 	background: linear-gradient(to right, #ffffff 50%, transparent 50%);
 	background-size: 200% 100%;
 	background-position: right bottom;
-	transition: all .25s ease;
+	transition: all .5s ease;
 }
 
 #contact > div:last-of-type a:hover {
@@ -493,6 +498,7 @@ nav button {
 	border-radius: 5px;
 	padding: .5rem 2rem;
 	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .25);
+	transition: all .5s;
 }
 
 /* events */
