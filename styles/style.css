@@ -416,7 +416,7 @@ nav button {
 	align-items: center;
 	margin: .5rem;
 	padding-right: 1rem;
-	border-radius: .75rem;
+	border-radius: .875rem;
 	background: linear-gradient(to right, #ffffff 50%, transparent 50%);
 	background-size: 200% 100%;
 	background-position: right bottom;
@@ -429,8 +429,8 @@ nav button {
 }
 
 .icon {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 1.75rem;
+	height: 1.75rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
