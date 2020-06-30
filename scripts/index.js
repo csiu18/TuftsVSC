@@ -60,7 +60,7 @@ function toggleNav() {
 function hideNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
 	resetAnimation(nav);
-	if (toggleAnimation) nav.className = 'slide-out-right';
+	if (toggleAnimation) nav.className = 'nav-slide-out-right';
 	setTimeout(
 		function () {
 			nav.style.display = 'none';
@@ -73,12 +73,12 @@ function showNav(toggleAnimation) {
 	const nav = document.querySelector('nav ul');
 	resetAnimation(nav);
 	nav.style.display = 'inherit';
-	if (toggleAnimation) nav.className = 'tilt-in-fwd-tr';
+	if (toggleAnimation) nav.className = 'nav-slide-in-right';
 }
 
 function resetAnimation(nav) {
-	nav.classList.remove('slide-out-right');
-	nav.classList.remove('tilt-in-fwd-tr');
+	nav.classList.remove('nav-slide-out-right');
+	nav.classList.remove('nav-slide-in-right');
 }
 
 function addProfiles() {
