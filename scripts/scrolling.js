@@ -2,7 +2,6 @@
 $(document).ready(function () {
 	// Check if 'scroll' cookies exists
 	if (Cookies.get('scroll')) {
-		resizeVideos();
 		scrollToHash(Cookies.get('scroll'));
 		Cookies.remove('scroll');
 	}
