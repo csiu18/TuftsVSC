@@ -2,10 +2,8 @@
 $(document).ready(function () {
 	// Check if 'scroll' cookies exists
 	if (Cookies.get('scroll')) {
-		setTimeout(function () {
-			scrollToHash(Cookies.get('scroll'));
-			Cookies.remove('scroll');
-		}, 200);
+		scrollToHash(Cookies.get('scroll'));
+		Cookies.remove('scroll');
 	}
 	// Add smooth scrolling to all links
 	$('a').on('click', function (event) {
