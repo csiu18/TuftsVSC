@@ -530,6 +530,7 @@ nav button {
 
 #events img, #events iframe {
 	opacity: 0;
+	align-self: flex-start;
 }
 
 #fall {
@@ -540,7 +541,6 @@ nav button {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
 }
 
 #fall > div:first-of-type, #spring > div:first-of-type {
@@ -814,6 +814,9 @@ footer {
 	#fall > div, #spring > div {
 		flex-direction: column;
 		align-items: center;
+	}
+	#events img, #events iframe {
+		align-self: inherit;
 	}
 	#fall > div:first-of-type > div {
 		width: 90%;

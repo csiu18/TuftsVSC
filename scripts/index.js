@@ -36,8 +36,8 @@ function resizeVideos() {
 		const picture2 = document.querySelector(
 			'#spring > div:last-of-type > img'
 		);
-		video1.style.height = picture1.style.height;
-		video2.style.height = picture2.style.height;
+		video1.style.height = `${picture1.clientHeight}px`;
+		video2.style.height = `${picture2.clientHeight}px`;
 	} else {
 		const videos = document.querySelectorAll('iframe');
 
