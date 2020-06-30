@@ -39,14 +39,15 @@ function resizeVideos() {
 		);
 		video1.style.height = `${picture1.clientHeight}px`;
 		video2.style.height = `${picture2.clientHeight}px`;
-	} else {
-		const videos = document.querySelectorAll('iframe');
-
-		for (let video of videos) {
-			const height = (video.clientWidth / 16) * 9;
-			video.style.height = `${height}px`;
-		}
 	}
+	// else {
+	// 	const videos = document.querySelectorAll('iframe');
+
+	// 	for (let video of videos) {
+	// 		const height = (video.clientWidth / 16) * 9;
+	// 		video.style.height = `${height}px`;
+	// 	}
+	// }
 }
 
 function matchMediaQuery(query) {

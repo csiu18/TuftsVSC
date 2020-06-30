@@ -851,6 +851,7 @@ footer {
 	}
 	#spring iframe {
 		width: 90% !important;
+		height: calc((100vw - 2rem) * .9 / (16 / 9)) !important;
 	}
 	/* roof background*/
 	#roof {
