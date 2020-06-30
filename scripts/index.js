@@ -23,31 +23,20 @@ window.onresize = function () {
 };
 
 function resizeVideos() {
-	if (!matchMediaQuery('(max-width: 767.98px)')) {
-		// set video height to image
-		const video1 = document.querySelector(
-			'#spring > div:first-of-type > iframe'
-		);
-		const picture1 = document.querySelector(
-			'#spring > div:first-of-type > div'
-		);
-		const video2 = document.querySelector(
-			'#spring > div:last-of-type > iframe'
-		);
-		const picture2 = document.querySelector(
-			'#spring > div:last-of-type > img'
-		);
-		video1.style.height = `${picture1.clientHeight}px`;
-		video2.style.height = `${picture2.clientHeight}px`;
-	}
-	// else {
-	// 	const videos = document.querySelectorAll('iframe');
-
-	// 	for (let video of videos) {
-	// 		const height = (video.clientWidth / 16) * 9;
-	// 		video.style.height = `${height}px`;
-	// 	}
-	// }
+	if (matchMediaQuery('(max-width: 767.98px)')) return;
+	// set video height to image
+	const video1 = document.querySelector(
+		'#spring > div:first-of-type > iframe'
+	);
+	const picture1 = document.querySelector(
+		'#spring > div:first-of-type > div'
+	);
+	const video2 = document.querySelector(
+		'#spring > div:last-of-type > iframe'
+	);
+	const picture2 = document.querySelector('#spring > div:last-of-type > img');
+	video1.style.height = `${picture1.clientHeight}px`;
+	video2.style.height = `${picture2.clientHeight}px`;
 }
 
 function matchMediaQuery(query) {
