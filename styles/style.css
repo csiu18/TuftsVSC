@@ -393,12 +393,15 @@ nav button {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+#contact > div:first-of-type > div p {
+	width: 70%;
 	text-align: center;
 }
 
 #contact > div:first-of-type > div img {
 	width: 25%;
-	margin: 1rem;
 }
 
 #contact > div:last-of-type {
