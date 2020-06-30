@@ -530,6 +530,7 @@ nav button {
 
 #events img, #events iframe {
 	opacity: 0;
+	align-self: flex-start;
 }
 
 #fall {
