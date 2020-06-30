@@ -4,8 +4,8 @@ $(document).ready(function () {
 	if (Cookies.get('scroll')) {
 		setTimeout(function () {
 			scrollToHash(Cookies.get('scroll'));
+			Cookies.remove('scroll');
 		}, 200);
-		Cookies.remove('scroll');
 	}
 	// Add smooth scrolling to all links
 	$('a').on('click', function (event) {
