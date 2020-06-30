@@ -530,7 +530,6 @@ nav button {
 
 #events img, #events iframe {
 	opacity: 0;
-	align-self: flex-start;
 }
 
 #fall {
@@ -541,6 +540,7 @@ nav button {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: stretch;
 }
 
 #fall > div:first-of-type, #spring > div:first-of-type {
