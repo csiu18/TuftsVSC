@@ -10,9 +10,10 @@ window.onload = function () {
 	}, 200);
 	if (window.location.pathname === '/gallery.html') return;
 	addProfiles();
-	animateEvents();
 	// resize videos
 	resizeVideos();
+	// animate them
+	animateEvents();
 };
 
 window.onresize = function () {
