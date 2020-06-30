@@ -17,6 +17,7 @@ $(document).ready(function () {
 			if (window.location.pathname === '/gallery.html') {
 				Cookies.set('scroll', this.hash);
 				window.location.replace('/');
+				return;
 			}
 			// Scroll to hash
 			scrollToHash(this.hash);
