@@ -631,8 +631,8 @@ footer {
 
 /* email */
 #email {
-	padding: .5rem;
-	padding-top: 4.5rem;
+	padding: 1rem;
+	padding-top: 4rem;
 	background-color: #e9ddc3;
 	box-shadow: inset 0 -2px 4px -1px rgba(0, 0, 0, .25);
 }
@@ -640,7 +640,7 @@ footer {
 #email h1 {
 	font-size: 1.25rem;
 	font-weight: 600;
-	margin: .5rem;
+	margin: 1rem;
 	text-align: center;
 }
 
@@ -654,7 +654,8 @@ footer {
 }
 
 #email input[type='submit'] {
-	width: 10%;
+	min-width: 10%;
+	padding: auto 1rem;
 }
 
 /* container */
@@ -785,7 +786,7 @@ footer {
 	#contact > div:first-of-type p, #contact > div:last-of-type p {
 		font-size: 1.25rem;
 	}
-	#contact input, #contact > div:last-of-type a {
+	#contact input, #email input, #contact > div:last-of-type a {
 		font-size: .75rem;
 		margin: .25rem;
 	}
@@ -899,7 +900,7 @@ footer {
 	#contact > div:not(#gallery) {
 		order: 2;
 	}
-	#contact input, #contact > div:last-of-type a {
+	#contact input, #email input, #contact > div:last-of-type a {
 		font-size: 1rem;
 	}
 	/* gallery */
@@ -914,6 +915,13 @@ footer {
 	}
 	#gallery > * {
 		bottom: 4rem;
+	}
+	/* email */
+	#email input[type='text'] {
+		width: 25%;
+	}
+	#email input[type='submit'] {
+		width: 15%;
 	}
 }
 
@@ -960,5 +968,19 @@ footer {
 	/* gallery */
 	#gallery > * {
 		bottom: 2rem;
+	}
+	/* email */
+	#email form {
+		flex-direction: column;
+		align-items: center;
+	}
+	#email input[type='text'] {
+		width: 80%;
+		text-align: center;
+	}
+	
+	#email input[type='submit'] {
+		width: 40%;
+		margin-top: .5rem;
 	}
 }
