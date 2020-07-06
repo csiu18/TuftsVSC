@@ -121,6 +121,7 @@ function animateProfileBlurbs() {
 			profile.lastElementChild.style.webkitClipPath =
 				'circle(150% at 100% 0%)';
 			profile.lastElementChild.style.clipPath = 'circle(150% at 100% 0%)';
+			profile.lastElementChild.style.transform = 'translateZ(0)';
 		});
 		profile.addEventListener('mouseleave', function () {
 			profile.lastElementChild.style.webkitClipPath =
