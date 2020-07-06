@@ -5,16 +5,14 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	// add loading animation??
+	let section = e.target.parentElement;
+	for (let childElem of section.children) {
+		if (childElem.classList.contains('hidden')) {
+			childElem.classList.remove('hidden');
+			childElem.classList.add('fade-in');
+		} else childElem.classList.add('hidden');
+	}
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-		.then((response) => {
-			let section = e.target.parentElement;
-			for (let childElem of section.children) {
-				if (childElem.classList.contains('hidden')) {
-					childElem.classList.remove('hidden');
-					childElem.classList.add('fade-in');
-				} else childElem.classList.add('hidden');
-			}
-		})
-		.catch((error) => console.error('Error!', error.message));
+		.then((response) => {})
+		.catch((error) => {});
 });
