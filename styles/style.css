@@ -1022,10 +1022,6 @@ footer {
 		width: 60vw;
 		height: 60vw;
 	}
-	#e-board .blurb {
-		font-size: 1rem;
-		line-height: 1.25rem;
-	}
 	/* gallery */
 	#gallery > * {
 		bottom: 2rem;
