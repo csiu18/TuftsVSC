@@ -313,7 +313,10 @@ nav button {
 
 #e-board .profile {
 	margin: 0 .5rem;
+	margin-bottom: 1rem;
 	opacity: 0;
+	position: relative;
+	max-width: min-content;
 }
 
 #e-board .image {
@@ -324,7 +327,7 @@ nav button {
 
 #e-board .desc {
 	width: 100%;
-	margin: 1rem 0 1.25rem 0;
+	margin: 1rem 0 .25rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -335,6 +338,24 @@ nav button {
 #e-board .desc p:not(.title) {
 	font-weight: 300;
 	line-height: 1.5rem;
+}
+
+#e-board .blurb {
+	position: absolute;
+	background-color: #E8E8E8;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 1rem;
+	font-size: .85rem;
+	line-height: 1rem;
+	overflow: scroll;
+	/* display: none; */
+}
+
+#e-board .blurb::-webkit-scrollbar {
+    width: 5px;
 }
 
 /* contact */
