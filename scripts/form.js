@@ -5,6 +5,7 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	// add loading animation??
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 		.then((response) => {
 			let section = e.target.parentElement;
