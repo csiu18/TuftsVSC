@@ -118,9 +118,13 @@ function animateProfileBlurbs() {
 	let profiles = document.querySelectorAll('.profile');
 	for (let profile of profiles) {
 		profile.addEventListener('mouseenter', function () {
+			profile.lastElementChild.style.webkitClipPath =
+				'circle(150% at 100% 0%)';
 			profile.lastElementChild.style.clipPath = 'circle(150% at 100% 0%)';
 		});
 		profile.addEventListener('mouseleave', function () {
+			profile.lastElementChild.style.webkitClipPath =
+				'circle(0% at 100% 0%)';
 			profile.lastElementChild.style.clipPath = 'circle(0% at 100% 0%)';
 		});
 	}

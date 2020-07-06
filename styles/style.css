@@ -352,6 +352,7 @@ nav button {
 	font-size: .8rem;
 	line-height: 1rem;
 	overflow: scroll;
+	-webkit-clip-path: circle(0% at 100% 0%);
 	clip-path: circle(0% at 100% 0%);
 	transition: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
