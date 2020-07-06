@@ -10,6 +10,8 @@ window.onload = function () {
 	}, 200);
 	if (window.location.pathname === '/gallery.html') return;
 	addProfiles();
+	// animate blurbs
+	animateProfileBlurbs();
 	// resize videos
 	resizeVideos();
 	// animate them
@@ -110,6 +112,18 @@ function addProfiles() {
 		});
 	}, options);
 	intersectionObserver.observe(firstProfile);
+}
+
+function animateProfileBlurbs() {
+	let profiles = document.querySelectorAll('.profile');
+	for (let profile of profiles) {
+		profile.addEventListener('mouseenter', function () {
+			profile.lastElementChild.style.clipPath = 'circle(150% at 100% 0%)';
+		});
+		profile.addEventListener('mouseleave', function () {
+			profile.lastElementChild.style.clipPath = 'circle(0% at 100% 0%)';
+		});
+	}
 }
 
 function animateEvents() {
