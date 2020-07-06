@@ -395,7 +395,7 @@ nav button {
 	width: 50%;
 }
 
-#contact > div:first-of-type > div {
+#contact > div:first-of-type > div, #email div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -658,6 +658,14 @@ footer {
 	padding: auto 1rem;
 }
 
+#email > div > h1 {
+	margin-bottom: .5rem;
+}
+
+#email img {
+	width: 5%;
+}
+
 /* container */
 #container {
 	padding: 1rem;
@@ -789,6 +797,10 @@ footer {
 	#contact input, #email input, #contact > div:last-of-type a {
 		font-size: .75rem;
 		margin: .25rem;
+	}
+	/* email */
+	#email img {
+		width: 10%;
 	}
 }
 
@@ -982,5 +994,8 @@ footer {
 	#email input[type='submit'] {
 		width: 40%;
 		margin-top: .5rem;
+	}
+	#email img {
+		width: 20%;
 	}
 }

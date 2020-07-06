@@ -7,9 +7,7 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 		.then((response) => {
-			let section = document.querySelector(
-				'#contact > div:first-of-type'
-			);
+			let section = e.target.parentElement;
 			for (let childElem of section.children) {
 				if (childElem.classList.contains('hidden')) {
 					childElem.classList.remove('hidden');
