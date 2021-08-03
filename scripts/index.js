@@ -77,16 +77,17 @@ function resetAnimation(nav) {
 function addProfiles() {
 	// set profile pictures
 	const pictures = [
-		'jen',
-		'tu-anh',
-		'daniel',
-		'huyen',
-		'ricki',
 		'cindy',
+		'ricki',
 		'britnie',
+		'huyen',
+    'dan',
+    'phuong',
+    'sam',
+    'vicki'
 	];
 	const PATH = 'assets/profiles/';
-	const IMG_TYPE = '.jpg';
+	const IMG_TYPE = '.png';
 	const profileElems = document.querySelectorAll('.profile .image');
 
 	for (let i = 0; i < pictures.length; i++) {
